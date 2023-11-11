@@ -1,0 +1,14 @@
+<div>
+  <h2>Contact List</h2>
+</div>
+
+<div>
+  <ul>
+    <% sort_contacts(@contacts).each do |contact| %>
+      <li><a href="/contact/<%= contact[:id] %>"><%= contact[:name] %><a></li>
+      <% end %>
+  </ul>
+</div>
+
+
+<a href="/contact/new">New Contact</a>

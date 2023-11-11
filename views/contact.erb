@@ -1,0 +1,20 @@
+<div>
+  <h2>Contact Info</h2>
+</div>
+
+<div>
+  <p>
+    Name: <%= @contact[:name] %>
+  </p>
+  <p>
+    Phone Number: <%= @contact[:phone_number] %>
+  </p>
+  <p>
+    Email Address: <%= @contact[:email] %>
+  </p>
+</div>
+
+<a href="/contact/<%=@contact[:id] %>/update">Update</a> 
+<form action="/contact/<%= params[:id] %>/destroy" method="post">  
+    <input type="submit" value="DELETE">
+<form>

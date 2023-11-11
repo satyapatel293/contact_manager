@@ -1,0 +1,36 @@
+<div>
+  <h2>Update Contact</h2>
+</div>
+
+<form action="/contact/<%= params[:id] %>" method="post">
+  <fieldset class="actions">
+  <dl>
+    <dt>
+      <label for="new_name">Name:</label>
+    </dt>
+    <dd>
+    <input name="new_name" type="text" value="<%= @contact[:name] %>">
+    </dd>
+  </dl>
+    <dl>
+    <dt>
+      <label for="new_phone_number">Phone Number:</label>
+    </dt>
+    <dd>
+    <input name="new_phone_number" type="text" value="<%= @contact[:phone_number] %>">
+    </dd>
+  </dl>
+    <dl>
+    <dt>
+      <label for="new_email">Email:</label>
+    </dt>
+    <dd>
+    <input name="new_email" type="email" value="<%= @contact[:email] %>">
+    </dd>
+  </dl>
+    <input type="submit" value="Save">
+    <p>
+      <a href="/contact/<%= params[:id] %>">Cancel</a>
+    </p>
+  </fieldset>
+</form>

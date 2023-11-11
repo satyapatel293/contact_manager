@@ -1,0 +1,36 @@
+<div>
+  <h2>Add Contact</h2>
+</div>
+
+<form action="/contact" method="post">
+  <fieldset class="actions">
+  <dl>
+    <dt>
+      <label for="name">Name:</label>
+    </dt>
+    <dd>
+    <input name="name" type="text" value="">
+    </dd>
+  </dl>
+    <dl>
+    <dt>
+      <label for="phone_number">Phone Number:</label>
+    </dt>
+    <dd>
+    <input name="phone_number" type="text" placeholder = "###-###-####" value="">
+    </dd>
+  </dl>
+    <dl>
+    <dt>
+      <label for="email">Email:</label>
+    </dt>
+    <dd>
+    <input name="email" type="email" placeholder = "example@test.com" value="">
+    </dd>
+  </dl>
+    <input type="submit" value="Save">
+    <p>
+      <a href="/contacts">Cancel</a>
+    </p>
+  </fieldset>
+</form>
