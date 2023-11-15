@@ -1,0 +1,19 @@
+<div>
+  <h2>Category List</h2>
+</div>
+
+<div>
+  <ul>
+    <% @list.each do |category, contact_list| %>
+     <li><%= category %></li>
+        <ul>
+        <% contact_list.each do |contact|%>
+          <li><a href="/contact/<%= contact[:id] %>"><%= contact[:name] %><a></li>
+        <% end %>
+        </ul>
+     <% end %>
+  </ul>
+</div>
+
+<p><a href='/'>Unsorted list</a></p>
+<a href="/contact/new">New Contact</a>

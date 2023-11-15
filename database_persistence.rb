@@ -6,9 +6,14 @@ class DatabasePersistence
   end 
 
   def load_all_contacts
-    @result = @db.exec("SELECT name, id FROM contacts")
+    @result = @db.exec("SELECT c.*, ca.category_name FROM contacts AS c JOIN categories AS ca ON c.category_id = ca.id ")
     @result.map do |tuple| 
-     {name: tuple["name"], id: tuple["id"] }
+      { id: tuple["id"], 
+        name: tuple["name"],
+        phone_number: tuple["phone_number"],
+        email: tuple["email"],
+        category_name: tuple["category_name"],
+      }
     end 
   end 
 
